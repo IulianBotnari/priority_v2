@@ -16,6 +16,10 @@ public enum ResponseCode {
 	INFO_BIRTHDATE_NOT_FOUND("info.birthdate.not.found"),
 	INFO_EMAIL_NOT_FOUND("info.email.not.found"),
 	
+	INFO_USER_CREATED("info.user.created"),
+	INFO_USER_UPDATED("info.user.updated"),
+	INFO_USER_DELETED("info.user.deleted"),
+	
 	//error enum
 	ERROR_REQUEST_DATA("error.request.data"),
 	ERROR_RESPONSE_MAP("error.response.map");
