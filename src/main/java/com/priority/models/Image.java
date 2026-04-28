@@ -40,13 +40,13 @@ public class Image {
 	@JoinColumn(name = "task_id")
 	private Task task;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "TEXT")
 	private String image;
 	
 	@CreatedDate
 	private LocalDateTime createdAt;
 	
 	@LastModifiedDate
-	private LocalDateTime deDateTime;
+	private LocalDateTime deleteDateTime;
 
 }

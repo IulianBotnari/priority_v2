@@ -44,6 +44,9 @@ public class Task {
     @JoinColumn(name = "user_id")
 	private User user;
 	
+	@Column(nullable = false)
+	private String taskTitle;
+	
 	private String taskDescription;
 	
 	@Min(value = 1, message = "Min priority can be 1")
@@ -51,14 +54,15 @@ public class Task {
 	@Column(columnDefinition = "INTEGER CHECK (task_priority >= 1 AND task_priority <=3)")
 	private Long taskPriority;
 	
-	@CreatedDate
-	private LocalDateTime insertDateTime;
+	private LocalDateTime startDateTime;
 	
 	private LocalDateTime endDateTime;
 	
 	@Column
 	private Boolean isRepeated;
 	
+	@CreatedDate
+	private LocalDateTime insertDateTime;
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 	
