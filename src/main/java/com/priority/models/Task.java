@@ -62,7 +62,7 @@ public class Task {
 	private Boolean isRepeated;
 	
 	@CreatedDate
-	private LocalDateTime insertDateTime;
+	private LocalDateTime createdAt;
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 	
