@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class ImageImpl implements InterfaceImageService{@Override
-	public ImageResponse getById(ImageRequest request, Locale locale) throws Exception {
+	public ImageResponse getById(Long request, Locale locale) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -30,12 +30,20 @@ public class ImageImpl implements InterfaceImageService{@Override
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
-	public void delete(ImageRequest request, Locale locale) throws Exception {
+	public void update(ImageRequest request, Locale locale) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void delete(Long request, Locale locale) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 
 

@@ -8,12 +8,14 @@ import com.priority.dto.output.UserResponse;
 
 public interface InterfaceUserService {
 	
-	UserResponse getById(UserRequest request, Locale locale) throws Exception;
+	UserResponse getById(Long id, Locale locale) throws Exception;
 	
 	List<UserResponse> listAll(Locale locale) throws Exception;
 	
 	void create(UserRequest request, Locale locale) throws Exception;
 	
-	void delete(UserRequest request, Locale locale) throws Exception;
+	void update(UserRequest request, Locale locale) throws Exception;
+	
+	void delete(Long request, Locale locale) throws Exception;
 
 }

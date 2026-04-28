@@ -3,11 +3,22 @@ package com.priority.enums;
 
 public enum ResponseCode {
 	
-	DATA_NOT_FOUND("data.not.found"),
-	REQUEST_DATA_ERROR("request.data.error"),
-	ID_REQUEST_NULL("id.request.null"),
-	USER_NOT_FOUND("user.not.found"),
-	RESPONSE_MAP_ERROR("response.map.error");
+	
+	// info enum
+	INFO_DATA_NOT_FOUND("info.data.not.found"),
+	INFO_ID_REQUEST_NULL("info.id.request.null"),
+	
+	// info User
+	INFO_USER_NOT_FOUND("info.user.not.found"),
+	INFO_USERNAME_NOT_FOUND("info.username.not.found"),
+	INFO_SURNAME_NOT_FOUND("info.surname.not.found"),
+	INFO_CODEFISCALE_NOT_FOUND("info.codefiscale.not.found"),
+	INFO_BIRTHDATE_NOT_FOUND("info.birthdate.not.found"),
+	INFO_EMAIL_NOT_FOUND("info.email.not.found"),
+	
+	//error enum
+	ERROR_REQUEST_DATA("error.request.data"),
+	ERROR_RESPONSE_MAP("error.response.map");
 	
 	private final String key;
 	

@@ -9,11 +9,13 @@ import com.priority.dto.output.ImageResponse;
 
 
 public interface InterfaceImageService {
-	ImageResponse getById(ImageRequest request, Locale locale) throws Exception;
+	ImageResponse getById(Long id, Locale locale) throws Exception;
 	
 	List<ImageResponse> listAll(Locale locale) throws Exception;
 	
 	void create(ImageRequest request, Locale locale) throws Exception;
 	
-	void delete(ImageRequest request, Locale locale) throws Exception;
+	void update(ImageRequest request, Locale locale) throws Exception;
+	
+	void delete(Long request, Locale locale) throws Exception;
 }

@@ -13,7 +13,7 @@ import com.priority.services.interfaces.InterfaceTaskService;
 public class TaskImpl implements InterfaceTaskService{
 
 	@Override
-	public TaskResponse getById(TaskRequest request, Locale locale) throws Exception {
+	public TaskResponse getById(Long request, Locale locale) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -29,12 +29,20 @@ public class TaskImpl implements InterfaceTaskService{
 		// TODO Auto-generated method stub
 		
 	}
+	
 
 	@Override
-	public void delete(TaskRequest request, Locale locale) throws Exception {
+	public void update(TaskRequest request, Locale locale) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void delete(Long request, Locale locale) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 

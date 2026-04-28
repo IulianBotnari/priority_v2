@@ -43,7 +43,6 @@ public class User {
 	@Column(nullable = false)
 	private String surname;
 	
-
 	@Column(nullable = false, length = 16)
 	private String codeFiscale;
 	
@@ -63,8 +62,6 @@ public class User {
 	
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
-	
-	
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> userTasks;
