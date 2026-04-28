@@ -5,6 +5,7 @@ public enum ResponseCode {
 	
 	
 	// info enum
+	
 	INFO_DATA_NOT_FOUND("info.data.not.found"),
 	INFO_ID_REQUEST_NULL("info.id.request.null"),
 	

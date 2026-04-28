@@ -37,7 +37,7 @@ public class Image {
 	private Long imageId;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "task_id")
+	@JoinColumn(name = "taskId")
 	private Task task;
 	
 	@Column(nullable = false, columnDefinition = "TEXT")

@@ -80,9 +80,11 @@ public class UserController {
 			userS.create(request, locale);			
 			response = responseMsg.getMsg(ResponseCode.INFO_USER_CREATED, locale);
 			
+			
 		} catch (Exception e) {
 			response = e.getMessage();
 			status = HttpStatus.BAD_REQUEST;
+
 		}
 		
 		return ResponseEntity.status(status).body(response);
