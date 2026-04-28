@@ -103,22 +103,17 @@ public class UserImpl implements InterfaceUserService{
 		
 		User user = userR.findById(request.getUserId()).orElseThrow(()-> new Exception(responseMessage.getMsg(ResponseCode.INFO_USER_NOT_FOUND, locale)));
 		
-		log.info("Get user by id {}", request.getUserId());
+		log.info("Update user by id {}", request.getUserId());
 		
-		if (request.getName() != null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_USERNAME_NOT_FOUND, locale));
-		user.setName(request.getName());
+		if (request.getName() != null) user.setName(request.getName());
 		
-		if (request.getSurname() != null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_SURNAME_NOT_FOUND, locale));
-		user.setSurname(request.getSurname());
+		if (request.getSurname() != null) user.setSurname(request.getSurname());
 		
-		if (request.getCodeFiscale() != null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_CODEFISCALE_NOT_FOUND, locale));
-		user.setCodeFiscale(request.getCodeFiscale());
+		if (request.getCodeFiscale() != null) user.setCodeFiscale(request.getCodeFiscale());
 		
-		if (request.getBirthDate() != null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_BIRTHDATE_NOT_FOUND, locale));
-		user.setBirthDate(request.getBirthDate());
+		if (request.getBirthDate() != null) user.setBirthDate(request.getBirthDate());
 		
-		if (request.getEmail() != null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_EMAIL_NOT_FOUND, locale));
-		user.setEmail(request.getEmail());
+		if (request.getEmail() != null) user.setEmail(request.getEmail());
 		
 		userR.save(user);
 		
@@ -132,7 +127,7 @@ public class UserImpl implements InterfaceUserService{
 		
 		User user = userR.findById(id).orElseThrow(()-> new Exception(responseMessage.getMsg(ResponseCode.INFO_USER_NOT_FOUND, locale)));
 		
-		log.info("Get user by id {}", id);
+		log.info("Delete user by id {}", id);
 		
 		userR.delete(user);
 		
