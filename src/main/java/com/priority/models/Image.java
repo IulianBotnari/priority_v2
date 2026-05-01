@@ -28,7 +28,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "tasks")
+@Table(name = "image")
 @EntityListeners(AuditingEntityListener.class)
 public class Image {
 	

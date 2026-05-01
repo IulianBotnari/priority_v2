@@ -33,6 +33,10 @@ public class UserRequest {
     @Pattern(regexp = ".+@.+\\..+", message = "L'email deve contenere un dominio valido")
 	private String email;
 	
+	private String phone;
+	
+	private String password;
+	
 	private String profileImage;
 	
 	private Boolean isActive;

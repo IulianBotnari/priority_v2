@@ -83,14 +83,19 @@ public class UserImpl implements InterfaceUserService{
 		if (request.getSurname() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_SURNAME_NOT_FOUND, locale));
 		user.setSurname(request.getSurname());
 		
+		if (request.getEmail() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_EMAIL_NOT_FOUND, locale));
+		user.setEmail(request.getEmail());
+		
 		if (request.getCodeFiscale() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_CODEFISCALE_NOT_FOUND, locale));
 		user.setCodeFiscale(request.getCodeFiscale());
 		
 		if (request.getBirthDate() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_BIRTHDATE_NOT_FOUND, locale));
 		user.setBirthDate(request.getBirthDate());
+				
+		if (request.getPassword() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_EMAIL_NOT_FOUND, locale));
+		user.setPassword(request.getPassword());
 		
-		if (request.getEmail() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_EMAIL_NOT_FOUND, locale));
-		user.setEmail(request.getEmail());
+		user.setIsAuth(true);
 		
 		userR.save(user);
 	}

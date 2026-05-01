@@ -61,10 +61,14 @@ public class Task {
 	@Column
 	private Boolean isRepeated;
 	
+	private Boolean isCompleted;
+	
 	@CreatedDate
 	private LocalDateTime createdAt;
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
+	
+	private LocalDateTime deletedAt;
 	
 	@OneToMany(mappedBy = "task", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Image> taskImages;

@@ -45,26 +45,36 @@ public class User {
 	
 	@Column(nullable = false, length = 16)
 	private String codeFiscale;
-	
+	@Column(nullable = false)
 	private LocalDate birthDate;
 	
 	@Column(nullable = false, unique = true)
 	private String email;
 	
 	private String profileImage;
+	
+	private String phone;
+	
+	@Column(nullable = false)
+	private String password;
 
 	private Boolean isActive;
+	
+	private Boolean isAuth;
 	
 	@CreatedDate
 	private LocalDateTime createdAt;
 	
 	private LocalDateTime deletedAt;
 	
+	
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Task> userTasks;
+	
+	
 	
 	
 }
