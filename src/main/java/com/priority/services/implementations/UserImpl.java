@@ -1,5 +1,6 @@
 package com.priority.services.implementations;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
@@ -11,6 +12,7 @@ import com.priority.dto.input.UserRequest;
 import com.priority.dto.output.UserResponse;
 import com.priority.enums.ResponseCode;
 import com.priority.mappers.MapToResponse;
+import com.priority.models.Task;
 import com.priority.models.User;
 import com.priority.repository.UserRepository;
 import com.priority.services.interfaces.InterfaceUserService;
@@ -71,7 +73,7 @@ public class UserImpl implements InterfaceUserService{
 	}
 
 	@Override
-	public void create(UserRequest request, Locale locale) throws Exception {
+	public UserResponse create(UserRequest request, Locale locale) throws Exception {
 		log.info("Start user.create() method");
 		
 		if (request == null) throw new Exception(responseMessage.getMsg(ResponseCode.ERROR_REQUEST_DATA, locale));
@@ -95,9 +97,15 @@ public class UserImpl implements InterfaceUserService{
 		if (request.getPassword() == null) throw new Exception(responseMessage.getMsg(ResponseCode.INFO_EMAIL_NOT_FOUND, locale));
 		user.setPassword(request.getPassword());
 		
+		if (user.getUserTasks() == null || user.getUserTasks().isEmpty()) { 
+		    user.setUserTasks(new ArrayList<Task>());
+		}
+		
 		user.setIsAuth(true);
 		
-		userR.save(user);
+		User savedUser = userR.save(user);
+		
+		return mapToResponse.userToUserResponse(savedUser);
 	}
 	
 	@Override

@@ -25,8 +25,9 @@
     );
 
     create table users (
-        birth_date date,
+        birth_date date not null,
         is_active boolean,
+        is_auth boolean,
         created_at timestamp(6),
         deleted_at timestamp(6),
         updated_at timestamp(6),
@@ -34,6 +35,8 @@
         code_fiscale varchar(16) not null,
         email varchar(255) not null unique,
         name varchar(255) not null,
+        password varchar(255) not null,
+        phone varchar(255),
         profile_image varchar(255),
         surname varchar(255) not null,
         primary key (user_id)

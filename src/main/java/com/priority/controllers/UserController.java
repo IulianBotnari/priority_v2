@@ -77,8 +77,8 @@ public class UserController {
 		HttpStatus status = HttpStatus.OK;
 		
 		try {
-			userS.create(request, locale);			
-			response = responseMsg.getMsg(ResponseCode.INFO_USER_CREATED, locale);
+						
+			response = userS.create(request, locale);
 			
 			
 		} catch (Exception e) {

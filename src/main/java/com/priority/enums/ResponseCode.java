@@ -16,6 +16,7 @@ public enum ResponseCode {
 	INFO_CODEFISCALE_NOT_FOUND("info.codefiscale.not.found"),
 	INFO_BIRTHDATE_NOT_FOUND("info.birthdate.not.found"),
 	INFO_EMAIL_NOT_FOUND("info.email.not.found"),
+	INFO_PASSWORD_NOT_FOUND("info.password.not.found"),
 	
 	INFO_USER_CREATED("info.user.created"),
 	INFO_USER_UPDATED("info.user.updated"),

@@ -40,6 +40,10 @@ public class UserResponse {
 	
 	private LocalDateTime updatedAt;
 	
+	private String message;
+	
+	private Boolean isSuccess;
+	
 	private List<TaskResponse> userTasks;
 
 }

@@ -24,6 +24,8 @@ public class MapToResponse {
 				.email(user.getEmail())
 				.profileImage(user.getProfileImage())
 				.isActive(user.getIsActive())
+				.message(null)
+				.isSuccess(false)
 				.createdAt(user.getCreatedAt())
 				.deletedAt(user.getDeletedAt() != null ? user.getDeletedAt() : null)
 				.updatedAt(user.getUpdatedAt() != null ? user.getUpdatedAt() : null)

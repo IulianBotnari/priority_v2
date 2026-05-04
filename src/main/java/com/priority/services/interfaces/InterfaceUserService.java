@@ -12,7 +12,7 @@ public interface InterfaceUserService {
 	
 	List<UserResponse> listAll(Locale locale) throws Exception;
 	
-	void create(UserRequest request, Locale locale) throws Exception;
+	UserResponse create(UserRequest request, Locale locale) throws Exception;
 	
 	void update(UserRequest request, Locale locale) throws Exception;
 	
