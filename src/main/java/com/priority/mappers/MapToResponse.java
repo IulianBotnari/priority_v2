@@ -22,6 +22,7 @@ public class MapToResponse {
 				.codeFiscale(user.getCodeFiscale())
 				.birthDate(user.getBirthDate())
 				.email(user.getEmail())
+				.password(user.getPassword())
 				.profileImage(user.getProfileImage())
 				.isActive(user.getIsActive())
 				.message(null)

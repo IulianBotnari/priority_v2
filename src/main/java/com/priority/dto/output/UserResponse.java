@@ -30,6 +30,8 @@ public class UserResponse {
 	
 	private String email;
 	
+	private String password;
+	
 	private String profileImage;
 	
 	private Boolean isActive;
